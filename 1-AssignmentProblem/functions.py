@@ -4,13 +4,14 @@ def imprimir(matriz, lin, col):
             print(f"{matriz[i][j]}\t", end="")
         print()
 
+
 def solucao(matriz_custo, N):
     tarefa = [-1] * N
     custo_total = 0
 
     # Atribuição de tarefas usando Branch and Bound
     for i in range(N):
-        custo_minimo = float('inf')
+        custo_minimo = float("inf")
         pessoa = -1
 
         for j in range(N):
@@ -23,6 +24,6 @@ def solucao(matriz_custo, N):
 
     print("\nAlocação de Tarefas:")
     for i in range(N):
-        print(f"Tarefa {tarefa[i] + 1} -> Pessoa {i + 1}")
+        print(f"Tarefa {i + 1} -> Pessoa {tarefa[i] + 1}")
 
     print("\nCusto Total:", custo_total)
